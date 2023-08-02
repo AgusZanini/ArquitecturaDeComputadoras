@@ -1,0 +1,34 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000000000 0x0000000000400000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD main.o
+
+.text           0x0000000000000000    0x1020c
+ *(.text*)
+ .text          0x0000000000000000    0x1020c main.o
+                0x00000000000100a0                inputRead
+                0x00000000000100c8                app
+
+.iplt           0x000000000001020c        0x0
+ .iplt          0x000000000001020c        0x0 main.o
+
+.rela.dyn       0x0000000000010210        0x0
+ .rela.iplt     0x0000000000010210        0x0 main.o
+
+.data           0x000000000001020c        0x0
+ .data          0x000000000001020c        0x0 main.o
+
+.igot.plt       0x0000000000010210        0x0
+ .igot.plt      0x0000000000010210        0x0 main.o
+
+.bss            0x000000000001020c        0x0
+ *(.bss*)
+ .bss           0x000000000001020c        0x0 main.o
+OUTPUT(main.elf elf64-littleaarch64)
+LOAD linker stubs
