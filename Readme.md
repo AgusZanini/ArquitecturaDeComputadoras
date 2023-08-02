@@ -22,9 +22,11 @@ El segundo ejercicio consiste en el desarrollo de un juego a eleccion, que debe 
 El juego desarrollado es un escape de un laberinto, el personaje es un triangulo verde que debe llegar hasta el final del laberinto, cuando el juego empieza el led rojo se prende, y cuando se llega al final el mismo se apaga y se prende el led verde
 
 ![laberinto](https://github.com/AgusZanini/ArquitecturaDeComputadoras/blob/master/imagenes/laberinto.png)
+
 Diseño del laberinto
 
 ![personaje](https://github.com/AgusZanini/ArquitecturaDeComputadoras/blob/master/imagenes/personaje.png)
+
 Personaje
 
 Lamentablemente no se cuentan con mas imagenes del proyecto, la Raspberry tuvo que ser devuelta a la universidad luego de la entrega.
